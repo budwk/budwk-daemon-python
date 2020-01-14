@@ -1,7 +1,7 @@
 # budwk-daemon-python
 BudWk 微服务开发框架应用守护进程 https://budwk.com
 
-* 基于 Python 3.7.3+ 开发
+* 运行环境 Python 3.7.3+
 * 支持 BudWk v6 
 * 支持分布式部署
 
@@ -14,7 +14,7 @@ BudWk 微服务开发框架应用守护进程 https://budwk.com
 
 * 根据配置要求将jar包及配置文件置于指定文件夹
 * 服务器的主机名不可重复
-* `pip3 install psutil` 安装psutil模块，获取CPU、内存占用情况
+* `pip3 install psutil` 安装psutil模块，用于获取CPU、内存占用情况
 * `nohup python server.py &` 启动守护进程
 * wk-nb-web-admin/wk-nb-web-api-daemon/wk-nb-web-api-open 等web项目是需要占用端口的，在同台服务器上启动多个实例的话，需使用不同配置文件配置不同端口，可以用版本号区分，如 1.2-9001、1.2-9002
 * wk-nb-web-api-daemon 默认端口 9001 是为守护进程通信用的，守护进程通过API获取任务和上报服务器资源占用情况
@@ -62,7 +62,7 @@ CACHE_HOST_NAME = ''
     wk-nb-service-sys.properties
 ```
 
-## NutzWk 配置文件
+## BudWk 配置文件
 
 ```text
     #实例名称与打包成功后的jar文件名保持一致
