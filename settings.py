@@ -1,18 +1,24 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # 初始jar包及配置文件文件夹,jar文件及配置文件以实例名为文件名,文件名中不包含版本号
-APP_JARS = 'D://data/jars/'
+APP_JARS = '/data/jars/'
 # 运行目录,*不要手动创建,启动时判断目录是否存在来初始化项目
-APP_ROOT = 'D://data/wk/'
+APP_ROOT = '/data/wk/'
 # jar文件名,名称要保持与配置文件里 nutz.application.name 值一致
 APP_LIST = [
     'wk-nb-service-sys',
+    'wk-nb-service-slog',
     'wk-nb-web-api-daemon',
+	'wk-nb-task',
 	'wk-nb-web-admin'
 ]
 # jar包启动的jvm配置参数
 APP_OPTS = {
-    'wk-nb-service-sys': '-Xmx300m -Xms60m'
+    'wk-nb-service-sys': '-Xmx300m -Xms100m',
+    'wk-nb-service-slog': '-Xmx100m -Xms60m',
+    'wk-nb-web-api-daemon': '-Xmx100m -Xms60m',
+    'wk-nb-task': '-Xmx100m -Xms60m',
+    'wk-nb-web-admin': '-Xmx500m -Xms100m',
 }
 # 通信密钥,保持与 wk-nb-web-api-daemon 模块里配置内容一致,用于心跳通信
 HTTP_SECRET_ID = 'wizzer'
